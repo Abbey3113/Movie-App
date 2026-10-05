@@ -30,7 +30,7 @@ function MovieDetails({ selectedID, KEY, watched, onCloseMovie, onAddWatch }) {
         setIsLoading(true);
         try {
           const res = await fetch(
-            `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedID}`,
+            `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedID}`,
           );
           if (!res.ok) throw new Error("unable to fetch movie detail");
           const data = await res.json();
